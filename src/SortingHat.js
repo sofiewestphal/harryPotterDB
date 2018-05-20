@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './images/logo.jpg'
 
 class SortingHat extends React.Component {
     constructor(){
@@ -20,6 +21,7 @@ class SortingHat extends React.Component {
                 yourHouse: yourHouseFromStorage
             })
         }
+        document.getElementById('yourHouseContainer').style.backgroundImage = `url(${logo})`;
     }
 
     getHouse(){
@@ -51,9 +53,10 @@ class SortingHat extends React.Component {
                 ref="btnGetHouse" 
                 onClick={this.getHouse}>
                 Get your house
-            </button>; 
+            </button>;             
+        
         return (
-            <div>
+            <div id="yourHouseContainer">
                 <h1>Get your own house at Hogwarts</h1>
                 {html}               
             </div>

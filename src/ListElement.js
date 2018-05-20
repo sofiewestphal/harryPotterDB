@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 
 const HogwartsList = props => {
     return (
-      <div>
+      <div className="listContainer">
         <h1>{props.children}</h1>
         <SearchBar onChange={props.onChangeHandler}/>
         {props.data.map( (item, i) => {
@@ -19,7 +19,7 @@ const HogwartsList = props => {
   }
   
   const HogwartsItem = props => {
-    return <h4>{props.hogwartsItemName}</h4>;
+    return <p>{props.hogwartsItemName}</p>;
   }
 
   export default HogwartsList;

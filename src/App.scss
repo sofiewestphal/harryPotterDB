@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+  
+body{
+  font-family: 'Merriweather', serif;
+}
+
+h1{
+  margin-bottom: 25px;
+}
+  
+nav {
+  background-color: goldenrod;
+  height: 10vh;
+  padding: 20px 50px 0px 50px;
+
+  ul{
+      display: flex;
+      justify-content: space-between;
+
+    li {
+      text-transform: uppercase;
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+      }
+  
+      a:visited {
+        color: #000;
+      }
+    }
+  }    
+}
+
+.tabMenu ul{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+
+  li {
+    width: 20%;
+    text-align: center;
+    list-style-type: none;
+    padding: 10px;
+    border-right: 1px solid grey;
+
+  }
+
+  :last-child{
+    border-right: none;
+
+  }
+}
+
+.mainContainer {
+  padding: 50px;
+}
+
+.flexContainer{
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.listContainer{
+  width: fit-content;
+}
+
+.mainSearchBar{
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+
+.landingPage{
+  background-image: url(images/logo.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 90vh;
+}

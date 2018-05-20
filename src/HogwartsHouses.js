@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import HogwartsList from './ListElement';
 import SortingHat from './SortingHat';
 
@@ -48,7 +48,7 @@ class HogwartsHouses extends Component {
       this.state.hogwartsHouses;
     
     return (
-      <div className="flexContainer">
+      <div className="mainContainer flexContainer">
         <HogwartsList 
           onChangeHandler={this.onChangeHandler.bind(this)} 
           itemToGet="name"

@@ -28,13 +28,20 @@ const Main = () => (
         <Route exact path='/' component={Home}/>
         <Route path='/houses' component={HogwartsHouses}/>
         <Route path='/characters' component={Characters}/>
+        <Route component={Oops404}/>
       </Switch>
     </main>
 )
 
 const Home = () => (
-    <div>
+    <div className="mainContainer landingPage">
         <h1>Welcome, let the magic begin</h1>
+    </div>
+)
+
+const Oops404 = () => (
+    <div className="mainContainer">
+        <h1>Oh, oh, you got caught sneeking around Hogwarts. This URL is not open for students</h1>
     </div>
 )
 
