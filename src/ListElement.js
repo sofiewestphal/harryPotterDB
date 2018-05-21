@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SearchBar from './SearchBar';
 
 const HogwartsList = props => {
@@ -8,7 +9,8 @@ const HogwartsList = props => {
         <SearchBar onChange={props.onChangeHandler}/>
         {props.data.map( (item, i) => {
           return (
-            <HogwartsItem 
+            <HogwartsItem
+              onClick={props.onClickHandler} 
               key={item._id} 
               hogwartsItemName={item[props.itemToGet]} 
             />
@@ -19,7 +21,21 @@ const HogwartsList = props => {
   }
   
   const HogwartsItem = props => {
-    return <p>{props.hogwartsItemName}</p>;
+    return (
+      <p
+      onClick={props.onClick}>
+      {props.hogwartsItemName}
+      </p>
+    );
+  }
+
+  HogwartsList.PropTypes = {
+    data: PropTypes.array
+  }
+
+  HogwartsItem.PropTypes = {
+    hogwartsItemName: PropTypes.string,
+    onClick: PropTypes.func
   }
 
   export default HogwartsList;

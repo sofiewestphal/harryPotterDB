@@ -34,7 +34,7 @@ const Main = () => (
 )
 
 const Home = () => (
-    <div className="mainContainer landingPage">
+    <div className="mainContainer">
         <h1>Welcome, let the magic begin</h1>
     </div>
 )
