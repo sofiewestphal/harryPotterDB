@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link, Switch, Route } from 'react-router-dom'
-import HogwartsHouses from './HogwartsHouses';
-import Characters from './Characters';
+import HogwartsHouses from './pages/HogwartsHouses';
+import Characters from './pages/Characters';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../actions';
+import { withRouter } from 'react-router-dom';
 
 const App = () => (
     <div>
@@ -45,4 +49,20 @@ const Oops404 = () => (
     </div>
 )
 
-export default App;
+function mapStateToProps(state){
+    return {
+        HogwartsHouses: state.HogwartsHouses,
+        characters: state.characters,
+        yourHouse: state.yourHouse
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return bindActionCreators(actionCreators, dispatch);
+}
+
+ 
+
+export default withRouter(
+    connect(mapStateToProps, mapDispatchToProps)(App)
+);

@@ -6,7 +6,7 @@ const HogwartsList = props => {
     return (
       <div className="listContainer">
         <h1>{props.children}</h1>
-        <SearchBar onChange={props.onChangeHandler}/>
+        
         {props.data.map( (item, i) => {
           return (
             <HogwartsItem
